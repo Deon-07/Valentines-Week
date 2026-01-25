@@ -2,7 +2,7 @@
 
 A magical, interactive web experience to celebrate the 8 days of Valentine's Week. Surprise your special someone with a personalized digital gift featuring animations, music, and memories.
 
-[**See it Live**](https://your-username.github.io/ValentineWeek)
+[**See it Live**](https://Deon-07.github.io/ValentineWeek)
 
 ## ✨ Features
 
@@ -75,7 +75,7 @@ To make it "Real-time" (where days only unlock on their specific dates, e.g., Ro
 
 If you want to edit on your computer:
 
-1. Clone the repo: `git clone https://github.com/your-username/ValentineWeek.git`
+1. Clone the repo: `git clone https://github.com/Deon-07/ValentineWeek.git`
 2. Open `index.html` in your browser.
 3. To view changes, refresh the page.
 
