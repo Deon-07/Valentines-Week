@@ -1,0 +1,78 @@
+{
+    "recipientName": "My Love",
+    "audioPath": "assets/music.mp3",
+    "days": [
+        {
+            "id": "day1",
+            "date": "Feb 7",
+            "title": "Rose Day",
+            "subtitle": "A rose for the most beautiful person.",
+            "message": "Even a thousand roses can't compare to your beauty.",
+            "themeColor": "#ff007f",
+            "icon": "🌹"
+        },
+        {
+            "id": "day2",
+            "date": "Feb 8",
+            "title": "Propose Day",
+            "subtitle": "Confessing my feelings...",
+            "message": "I don't need the whole world, I just need you. Will you be mine forever?",
+            "themeColor": "#ff4d4d",
+            "icon": "💍"
+        },
+        {
+            "id": "day3",
+            "date": "Feb 9",
+            "title": "Chocolate Day",
+            "subtitle": "Sweetness overloaded!",
+            "message": "Life is like a chocolate box, and you are my favorite flavor.",
+            "themeColor": "#8b4513",
+            "icon": "🍫"
+        },
+        {
+            "id": "day4",
+            "date": "Feb 10",
+            "title": "Teddy Day",
+            "subtitle": "A warm hug in a teddy.",
+            "message": "Sending you a teddy to cuddle when I'm not there.",
+            "themeColor": "#e0ac69",
+            "icon": "🧸"
+        },
+        {
+            "id": "day5",
+            "date": "Feb 11",
+            "title": "Promise Day",
+            "subtitle": "A promise of forever.",
+            "message": "I promise to walk with you, hold your hand, and love you until the end of time.",
+            "themeColor": "#9932cc",
+            "icon": "🤞"
+        },
+        {
+            "id": "day6",
+            "date": "Feb 12",
+            "title": "Hug Day",
+            "subtitle": "Embracing you tightly.",
+            "message": "Your arms are my favorite place to be. Sending you a big warm hug!",
+            "themeColor": "#ff69b4",
+            "icon": "🤗"
+        },
+        {
+            "id": "day7",
+            "date": "Feb 13",
+            "title": "Kiss Day",
+            "subtitle": "Sealed with a kiss.",
+            "message": "A kiss is a secret told to the mouth instead of the ear.",
+            "themeColor": "#ff0000",
+            "icon": "💋"
+        },
+        {
+            "id": "day8",
+            "date": "Feb 14",
+            "title": "Valentine's Day",
+            "subtitle": "The Day of Love",
+            "message": "Happy Valentine's Day! You are my today and all of my tomorrows.",
+            "themeColor": "#ff0040",
+            "icon": "❤️"
+        }
+    ]
+}

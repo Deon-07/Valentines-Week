@@ -1,0 +1,231 @@
+:root {
+    --primary-color: #ff4d4d;
+    --text-color: #333;
+    --bg-color: #fff0f5;
+    --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow: hidden; /* Prevent scroll */
+    height: 100vh;
+    width: 100vw;
+}
+
+.app-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Music Control */
+.music-control {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: transform 0.3s;
+}
+
+.music-control:hover {
+    transform: scale(1.1);
+}
+
+/* Screens */
+.screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 10;
+}
+
+/* Landing Page */
+.main-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.recipient-name {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.day-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.day-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.day-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.day-card-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.day-card-title {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Day View */
+.nav-btn.back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    z-index: 20;
+}
+
+.content-wrapper {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.visual-container {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 8rem; /* For emoji placeholders */
+    position: relative;
+}
+
+.text-container h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.text-container h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Navigation Controls */
+.navigation-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.nav-arrow {
+    background: none;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-arrow:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.dots-indicator {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active-dot {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Floating Elements Animation Class */
+.floater {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .day-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+}
