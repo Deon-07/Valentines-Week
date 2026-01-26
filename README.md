@@ -4,14 +4,26 @@ A magical, interactive web experience to celebrate the 8 days of Valentine's Wee
 
 [**See it Live**](https://Deon-07.github.io/ValentineWeek)
 
+## 🎥 Preview
+
+<div style="display: flex; gap: 10px; justify-content: center;">
+    <img src="preview/preview_1.png" width="48%" alt="Rose Day Preview">
+    <img src="preview/preview_2.png" width="48%" alt="Rose Day Detail">
+</div>
+*A sneak peek of the experience!*
+
 ## ✨ Features
 
-- **8 Days of Content**: From Rose Day to Valentine's Day.
-- **Interactive Storytelling**: Typing effects, animations, and transitions.
+- **8 Days of Content**: From Rose Day (Feb 7) to Valentine's Day (Feb 14).
+- **Interactive Storytelling**: WhatsApp-style typing effects, animations, and transitions.
+- **Date-Locked Mode**: Users can only see the day that matches the current date - no peeking ahead!
 - **Customizable**: Easily change names, messages, music, and images.
+- **Configurable Year**: Set the year in config for easy reuse every year.
 - **Music Player**: Plays romantic tunes (customizable per day).
 - **Responsive**: Works on mobile and desktop.
-- **Real-time Mode**: Option to lock days until the actual date arrives.
+- **Improved Audio System**: Uses local files for reliable playback with a user-friendly "Enable Music" consent modal.
+- **Developer Debug Panel**: Test any day without waiting - click 🔧 in top-left corner.
+- **Date Locking**: Prevents users from seeing future days (configurable).
 
 ---
 
@@ -29,10 +41,10 @@ You can edit the configuration directly on GitHub without downloading anything!
 1. Open `config.js` in your forked repository.
 2. Click the ✏️ (Edit) icon.
 3. Update the following values:
-   - `recipientName`: Your partner's name.
    - `year`: The year (e.g., 2026) to display in the footer.
+   - `recipientName`: Your partner's name.
    - `floatingIcons`: Change the background icons if you wish.
-   - `musicList`: Add your own music URLs.
+   - `musicList`: Add your own music URLs. Note: Propose Day now uses `@music_6.mp3` for a special touch!
    - **Daily Messages**: Scroll down to the `days` array and edit the `message`, `quote`, and `memories` for each day.
 
 ### Step 3: Enable GitHub Pages (Deploy)
@@ -49,25 +61,46 @@ You can edit the configuration directly on GitHub without downloading anything!
 
 ## ⚙️ Advanced Settings
 
+### Configurable Year
+
+In `config.js`, set the year for easy updating each Valentine's season:
+
+```javascript
+const config = {
+    year: 2026,  // Change this each year!
+    recipientName: "Your Partner's Name",
+    // ...
+};
+```
+
 ### Real-time Mode (Date Locking)
 
-By default, the site allows viewing all days immediately (so you can test it).
-To make it "Real-time" (where days only unlock on their specific dates, e.g., Rose Day unlocks on Feb 7):
+By default, the site is set to **date-locked mode** where users can only see the day that matches the current date. Navigation arrows are hidden to prevent peeking ahead.
+
+To switch to **testing mode** (view all days freely):
 
 1. Open `index.html`.
 2. Find the line:
 
    ```javascript
-   let isDateLocked = false;
+   let isDateLocked = true;
    ```
 
 3. Change it to:
 
    ```javascript
-   let isDateLocked = true;
+   let isDateLocked = false;
    ```
 
-4. Commit the changes. Now your partner can only open the days that have arrived!
+4. Now you can navigate between all days for testing.
+
+### Debug Panel (For Developers)
+
+When the page loads, click the 🔧 icon in the top-left corner to open the Date Debug panel. This allows you to:
+
+- Test any specific date (Feb 6-15)
+- See the "Coming Soon" message (before Feb 7)
+- Preview each day's content without waiting
 
 ---
 
@@ -80,6 +113,62 @@ If you want to edit on your computer:
 3. To view changes, refresh the page.
 
 ---
+
+## 📝 Recent Updates
+
+- **WhatsApp Typing Effect**: Message now types in the input bar first, then sends to the bubble - just like real WhatsApp!
+- **Date-Locked Navigation**: When `isDateLocked = true`, users can only see today's content (no navigation arrows).
+- **Configurable Year**: Set `year` in config.js for easy yearly updates.
+- **Debug Panel**: Press 🔧 to test any date without changing code.
+- **International Date Support**: Uses browser's local timezone for accurate date detection.
+
+---
+
+## 🎵 Audio System
+
+We've improved the audio system to ensure music plays reliably on all devices:
+
+1. **Local Assets**: Music is now loaded from the `assets/` folder (`music.mp3`, `music_2.mp3`, etc.) instead of external links, ensuring it always works.
+2. **Consent Modal**: If a browser blocks autoplay, a beautiful "Enable Music" popup appears, allowing the user to start the experience with one click.
+
+## 🔧 Developer Tools (How to Change Date)
+
+As a developer, you have two ways to change the date for testing:
+
+### Method 1: The Debug Panel (Easiest)
+
+1. Open the website.
+2. Click the **Wrench Icon (🔧)** in the top-left corner.
+3. Select any date (e.g., "Feb 8 - Propose Day") from the dropdown.
+4. Click **Apply Date**.
+5. The site will reload and behave *exactly* as if it were that day.
+
+### Method 2: Manual Code Override
+
+If you want to force a specific date via code:
+
+1. Open `index.html`.
+2. Find the variable `debugDate`.
+3. Set it to the desired date string (e.g., `'2-14'` for Valentine's Day):
+
+```javascript
+// Set to null for automatic date detection
+// Set to '2-7' through '2-14' to test specific days
+let debugDate = '2-8'; 
+```
+
+### Method 3: Enabling/Disabling the Debug Icon
+
+You can choose whether to show or hide the debug wrench icon 🔧 for the final user.
+
+1. Open `index.html`.
+2. Find the variable `showDebugPanel`.
+3. Set it to `true` (show) or `false` (hide):
+
+```javascript
+let showDebugPanel = false; // Hide for production (Default)
+// let showDebugPanel = true; // Show for development
+```
 
 ## ❤️ Credits
 

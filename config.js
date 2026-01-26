@@ -4,6 +4,9 @@
 // Customize this file to personalize the experience!
 
 const config = {
+    // Year for Valentine's Week (change this each year!)
+    year: 2026,
+
     // Your Name / Recipient Name
     recipientName: "Anu🌸",
 
@@ -63,7 +66,7 @@ const config = {
             themeColor: "#ff4d4d",
             bgStart: "#FFF5F5", bgMid: "#FFE4E4", bgEnd: "#FFD0D0",
             petalSymbols: ["💍", "💎", "💖", "✨", "⭐", "🌟"],
-            music: "https://cdn.pixabay.com/audio/2024/02/14/audio_9770949632.mp3",
+            music: "assets/music_6.mp3",
             memories: [
                 "I've thought about this moment...",
                 "A thousand times in my head.",
@@ -88,7 +91,7 @@ const config = {
             themeColor: "#8b4513",
             bgStart: "#FFF8F0", bgMid: "#FFE8D0", bgEnd: "#F5D0A9",
             petalSymbols: ["🍫", "🍬", "🤎", "🧁", "🍰", "🍪"],
-            music: "https://cdn.pixabay.com/audio/2022/10/12/audio_be9c28e1db.mp3",
+            music: "assets/music_3.mp3",
             memories: [
                 "Life can be bitter sometimes...",
                 "But then there's you.",
@@ -112,7 +115,7 @@ const config = {
             themeColor: "#e0ac69",
             bgStart: "#FFFAF0", bgMid: "#FFE8CC", bgEnd: "#FFD9B3",
             petalSymbols: ["🧸", "🤍", "💛", "🎀", "🌻", "🍯"],
-            music: "https://cdn.pixabay.com/audio/2022/01/18/audio_d0a13f69d0.mp3",
+            music: "assets/music_4.mp3",
             memories: [
                 "Sometimes I wish I was a teddy...",
                 "So I could be with you always.",
@@ -136,7 +139,7 @@ const config = {
             themeColor: "#9932cc",
             bgStart: "#FAF0FF", bgMid: "#E8D0FF", bgEnd: "#D8B0F0",
             petalSymbols: ["🤞", "💜", "🔮", "🌟", "⚡", "🦋"],
-            music: "https://cdn.pixabay.com/audio/2023/02/10/audio_5b9d33b490.mp3",
+            music: "assets/music_5.mp3",
             memories: [
                 "They say promises are meant to be broken...",
                 "But not mine.",
