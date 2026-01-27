@@ -122,6 +122,10 @@ If you want to edit on your computer:
 
 ## 📝 Recent Updates
 
+- **Start Page Link Preview**: Beautiful Open Graph preview image when sharing link on WhatsApp.
+- **Magical Teddy Day**: Added a glowing golden aura and floating sparkles to the gift box for a magical feel.
+- **Propose Day Celebration**: Clicking "Yes" now triggers a grand celebration with fireworks and hearts rain!
+- **Mobile Optimizations**: Improved countdown timer and layouts for better viewing on small screens.
 - **WhatsApp Typing Effect**: Message now types in the input bar first, then sends to the bubble - just like real WhatsApp!
 - **Date-Locked Navigation**: When `isDateLocked = true`, users can only see today's content (no navigation arrows).
 - **Configurable Year**: Set `year` in config.js for easy yearly updates.
