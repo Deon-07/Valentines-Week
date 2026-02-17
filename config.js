@@ -8,7 +8,7 @@ const config = {
     year: 2026,
 
     // Your Name / Recipient Name
-    recipientName: "My Darling Anu🌸",
+    recipientName: "My Darling🌸",
 
     // Background Icons (Floating)
     floatingIcons: [
